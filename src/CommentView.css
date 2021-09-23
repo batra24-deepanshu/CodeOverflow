@@ -1,0 +1,14 @@
+.each_user_comment{
+    margin-top: 5px;
+    border: 0.1px solid black;
+    border-radius: 2px;
+    background-color: lightgray;
+    margin-bottom: 10px;
+}
+.each_user_comment > h3{
+    font-size: 12px;
+}
+.comment_body{
+    margin: 5px;
+    background-color: white;
+}
