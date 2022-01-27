@@ -12,14 +12,20 @@ import CodeIcon from '@mui/icons-material/Code';
 import {useDispatch} from 'react-redux'
 import { auth } from './firebase';
 import { logout } from './features/userSlice';
-
+import {useHistory} from 'react-router-dom'
+import ContactPageIcon from '@mui/icons-material/ContactPage';
 function Header() {
     const dispatch=useDispatch()
- 
+    const history=useHistory();
     const logoutApp=()=>{
             dispatch(logout());
             auth.signOut();
     }
+    
+    const movetoMain=()=>{
+        history.push('/')
+}
+
     return (
         <div className="header">
            
@@ -32,13 +38,9 @@ function Header() {
                 </div> */}
             </div>
             <div className="header__right">
-                <HeaderOption  title="Community" Icon={HomeIcon} />
-                <HeaderOption  title="About Us" Icon={PermIdentityIcon} />
-                <HeaderOption  title="Contest" Icon={CodeIcon} />
-                {/* <HeaderOption title="Message Me" Icon={SupervisorAccountIcon} />
-                <HeaderOption title="Jobs" Icon={BusinessCenterIcon}/>
-                <HeaderOption title="Messaging" Icon={ChatIcon}/>
-                <HeaderOption title="Notifications" Icon={NotificationsIcon}/>*/}
+                <HeaderOption  title="Community" Icon={HomeIcon} onClick={movetoMain} />
+              
+
                 <HeaderOption onClick={logoutApp} title="me" avatar="https://img.icons8.com/ios-filled/50/000000/user-male-circle.png"/> 
             </div>
         </div>

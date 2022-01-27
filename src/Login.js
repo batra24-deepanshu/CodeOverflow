@@ -47,12 +47,16 @@ function Login() {
     }
     return (
         <div className="login">
-            <img src="https://dlpindia.com/blog/wp-content/uploads/2018/02/linkedin.png" alt=""/>
+            <img src="https://www.codetogether.com/wp-content/uploads/2020/02/codetogether-full-logo.png" alt=""/>
             <form>
-                <input  placeholder="Full Name (required if registering)" value={name} onChange={e=>setName(e.target.value)} type="text"/>
-                <input placeholder="Profile Picture URL(optional)"value={profilePic} onChange={e=>setProfilePic(e.target.value)} type="text"/>
-                <input placeholder="Email" value={email} onChange={e=>setEmail(e.target.value)} type="text"/>
-                <input placeholder="Password" value={password} onChange={e=>setPassword(e.target.value)} type="password"/>
+                <p>Full Name (required if Registering)</p>
+                <input  value={name} onChange={e=>setName(e.target.value)} type="text"/>
+                <p>Profile Picture</p>
+                <input value={profilePic} onChange={e=>setProfilePic(e.target.value)} type="text"/>
+                <p>Email</p>
+                <input  value={email} onChange={e=>setEmail(e.target.value)} type="text"/>
+                <p>Password</p>
+                <input  value={password} onChange={e=>setPassword(e.target.value)} type="password"/>
                 <button type="submit" onClick={loginToApp}>Sign in</button>
             </form>
 

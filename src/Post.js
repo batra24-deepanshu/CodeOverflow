@@ -8,15 +8,15 @@ import InputOption from "./InputOption";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 function Post({ postId, name, description, message, photoUrl, timestamp }) {
   
-  function convertTimestamp(timestamp) {
-    let date = timestamp.toDate();
-    let mm = date.getMonth();
-    let dd = date.getDate();
-    let yyyy = date.getFullYear();
+  // function convertTimestamp(timestamp) {
+  //   let date = timestamp.toDate();
+  //   let mm = date.getMonth();
+  //   let dd = date.getDate();
+  //   let yyyy = date.getFullYear();
 
-    date = mm + "/" + dd + "/" + yyyy;
-    return date;
-  }
+  //   date = mm + "/" + dd + "/" + yyyy;
+  //   return date;
+  // }
 
   return (
     <div className="post">
@@ -25,7 +25,7 @@ function Post({ postId, name, description, message, photoUrl, timestamp }) {
         <div className="post__info">
           <h2>{name}</h2>
           <p> {description}</p>
-          <p>{convertTimestamp(timestamp)}</p>
+          {/* <p>{convertTimestamp(timestamp)}</p> */}
         </div>
       </div>
       <div className="post__body">
