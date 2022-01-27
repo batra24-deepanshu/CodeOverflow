@@ -1,19 +1,14 @@
 import React from 'react'
 import './Header.css'
-// import SearchIcon from '@mui/icons-material/Search';
+
 import HeaderOption from './HeaderOption';
 import HomeIcon from '@mui/icons-material/Home'; 
-// import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
-// import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
-// import ChatIcon from '@mui/icons-material/Chat';
-// import NotificationsIcon from '@mui/icons-material/Notifications';
-import PermIdentityIcon from '@mui/icons-material/PermIdentity';
-import CodeIcon from '@mui/icons-material/Code';
+
 import {useDispatch} from 'react-redux'
 import { auth } from './firebase';
 import { logout } from './features/userSlice';
 import {useHistory} from 'react-router-dom'
-import ContactPageIcon from '@mui/icons-material/ContactPage';
+
 function Header() {
     const dispatch=useDispatch()
     const history=useHistory();
